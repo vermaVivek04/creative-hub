@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Verma — AI Developer, Space Science Enthusiast & Innovator</title>
+    <meta name="description"
+        content="Portfolio of Vivek Verma — AI developer, space science enthusiast, and team leader. Appreciated by ISRO for contributions to AI, programming, and space science.">
+    <link rel="icon" type="image/png" href="assets/download.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <span class="brand-dot"></span>
+                <span class="brand-name">Vivek Verma</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#recognition" class="nav-link">Recognition</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-profile-wrapper">
+                <div class="profile-glow"></div>
+                <img src="assets/profile.jpg" alt="Vivek Verma" class="hero-profile-img">
+            </div>
+            <div class="hero-badge">AI Developer · Space Enthusiast · Innovator</div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Vivek Verma</span>
+            </h1>
+            <p class="hero-subtitle">
+                Building the future with <strong>Artificial Intelligence</strong>, exploring the cosmos through
+                <strong>Space Science</strong>, and leading a team of passionate developers and learners.
+            </p>
+            <div class="hero-highlights">
+                <div class="highlight-chip">
+                    <span class="chip-icon">🤖</span> AI & Machine Learning
+                </div>
+                <div class="highlight-chip">
+                    <span class="chip-icon">🚀</span> Space Science
+                </div>
+                <div class="highlight-chip">
+                    <span class="chip-icon">💻</span> Full-Stack Development
+                </div>
+                <div class="highlight-chip">
+                    <span class="chip-icon">👥</span> Team Leadership
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#recognition" class="btn btn-primary">
+                    View ISRO Recognition
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                    </svg>
+                </a>
+                <a href="#projects" class="btn btn-outline">My Projects</a>
+            </div>
+            <div class="hero-recognition-strip">
+                <img src="assets/download.png" alt="ISRO" class="strip-logo">
+                <span>Officially Appreciated by <strong>Indian Space Research Organisation (ISRO)</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-label">About Me</div>
+            <h2 class="section-title">Passionate About <span class="gradient-text">Technology & Space</span></h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm Vivek Verma — an AI developer, programmer, and space science enthusiast from India. I've
+                        always been fascinated by how artificial intelligence can transform the way we solve problems,
+                        and how space technology pushes the boundaries of human potential.
+                    </p>
+                    <p>
+                        My journey spans across building AI-powered applications, developing full-stack web projects,
+                        diving deep into machine learning algorithms, and studying astrophysics and space exploration. I
+                        believe that the intersection of <strong>AI and Space Science</strong> is where the most
+                        exciting innovations will emerge.
+                    </p>
+                    <p>
+                        I've been recognized by <strong>ISRO (Indian Space Research Organisation)</strong> for my
+                        knowledge and contributions in AI, programming, and space science — a milestone that motivates
+                        me to keep pushing forward.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">10+</span>
+                        <span class="stat-label">AI Projects Built</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">3+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">1</span>
+                        <span class="stat-label">ISRO Recognition</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">Team</span>
+                        <span class="stat-label">Founded & Leading</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🤖 Artificial Intelligence</h3>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>Natural Language Processing</span>
+                        <span>Computer Vision</span>
+                        <span>AI Chatbots</span>
+                        <span>Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Programming & Development</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Full-Stack Development</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🚀 Space Science & Tech</h3>
+                    <div class="skill-tags">
+                        <span>Astrophysics</span>
+                        <span>Satellite Technology</span>
+                        <span>Orbital Mechanics</span>
+                        <span>Space Exploration</span>
+                        <span>Rocket Science</span>
+                        <span>Planetary Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-label">My Work</div>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-tag">AI PROJECT</div>
+                    <h3>AI-Powered Space Knowledge Assistant</h3>
+                    <p>Built an intelligent chatbot using NLP and machine learning that answers complex questions about
+                        space science, ISRO missions, astrophysics, and satellite technology. Trained on real scientific
+                        data.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>NLP</span><span>Machine Learning</span><span>API</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-tag">WEB APP</div>
+                    <h3>Personal Portfolio & Team Hub</h3>
+                    <p>A premium portfolio website showcasing my skills, projects, and team recruitment — built entirely
+                        from scratch with modern web technologies.</p>
+                    <div class="project-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-tag">AI + SPACE</div>
+                    <h3>Satellite Image Analyzer</h3>
+                    <p>An AI model that processes satellite imagery to detect patterns, geographic features, and
+                        environmental changes using computer vision techniques.</p>
+                    <div class="project-tech">
+                        <span>Computer Vision</span><span>Python</span><span>TensorFlow</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-tag">FULL-STACK</div>
+                    <h3>Developer Collaboration Platform</h3>
+                    <p>A platform for my team to collaborate on hackathons and SaaS projects — featuring task
+                        management, code sharing, and real-time communication.</p>
+                    <div class="project-tech">
+                        <span>React</span><span>Node.js</span><span>MongoDB</span><span>WebSocket</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ISRO RECOGNITION (CERTIFICATE) ========== -->
+    <section class="section recognition-section" id="recognition">
+        <div class="container">
+            <div class="section-label">Official Recognition</div>
+            <h2 class="section-title">Appreciated by <span class="gradient-text">ISRO</span></h2>
+            <p class="section-desc">I am honoured to have received this Certificate of Appreciation from the Indian
+                Space Research Organisation (ISRO) for my contributions in Artificial Intelligence, Programming, and
+                Space Science.</p>
+
+            <div class="certificate-wrapper">
+                <div class="certificate">
+                    <!-- Corner ornaments -->
+                    <div class="corner corner-tl"></div>
+                    <div class="corner corner-tr"></div>
+                    <div class="corner corner-bl"></div>
+                    <div class="corner corner-br"></div>
+
+                    <!-- Header -->
+                    <div class="cert-header">
+                        <div class="cert-logo-row">
+                            <div class="cert-line"></div>
+                            <img src="assets/download.png" alt="ISRO Logo" class="cert-logo">
+                            <div class="cert-line"></div>
+                        </div>
+                        <h2 class="cert-org">Indian Space Research Organisation</h2>
+                        <p class="cert-dept">Department of Space, Government of India</p>
+                        <p class="cert-addr">Antariksh Bhavan, New BEL Road, Bengaluru − 560 094, Karnataka</p>
+                    </div>
+
+                    <!-- Title -->
+                    <div class="cert-title-block">
+                        <div class="cert-stars">★ ★ ★</div>
+                        <h1 class="cert-title">Certificate of Appreciation</h1>
+                        <div class="cert-title-line"></div>
+                    </div>
+
+                    <div class="cert-meta">
+                        <span>Ref. No: ISRO/HQ/OUTREACH/2026/AP-3847</span>
+                        <span>Date: 24 March 2026</span>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="cert-body">
+                        <p class="cert-intro">This is to certify that</p>
+                        <div class="cert-name-box">
+                            <p class="cert-name">Vivek Verma</p>
+                        </div>
+
+                        <div class="cert-text">
+                            <p>
+                                The Indian Space Research Organisation (ISRO) is pleased to recognise and appreciate
+                                your <strong>exceptional contributions and outstanding knowledge</strong> in the domains
+                                of <strong>Artificial Intelligence, Computer Programming, and Space Science &
+                                    Technology</strong>.
+                            </p>
+                            <p>
+                                Your proficiency in developing AI-powered applications, your deep understanding of
+                                machine learning algorithms and natural language processing, and your ability to apply
+                                these technologies to solve real-world problems demonstrate a remarkable level of skill
+                                and dedication. Your programming expertise across multiple languages and frameworks has
+                                enabled you to build innovative solutions that bridge the gap between technology and
+                                scientific exploration.
+                            </p>
+                            <p>
+                                Furthermore, your comprehensive knowledge of space science — including astrophysics,
+                                satellite technology, orbital mechanics, and planetary exploration — reflects a genuine
+                                passion for understanding the cosmos. Your work at the intersection of AI and space
+                                science embodies the interdisciplinary approach that is essential for the future of
+                                space exploration.
+                            </p>
+                            <p>
+                                Your leadership in building and mentoring a team of aspiring developers and researchers
+                                is particularly commendable. You have demonstrated not only individual excellence but
+                                also the ability to inspire and uplift those around you.
+                            </p>
+                            <p>
+                                On behalf of the entire ISRO family, we congratulate you on your achievements and
+                                encourage you to continue your pursuit of knowledge and innovation. Individuals such as
+                                yourself represent the future of India's technological and scientific advancement.
+                            </p>
+                        </div>
+
+                        <div class="cert-quote">
+                            <blockquote>"The application of artificial intelligence to space exploration will define the
+                                next era of discovery. Those who master both shall lead the way."</blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Signatures -->
+                    <div class="cert-footer">
+                        <div class="cert-signatures">
+                            <div class="cert-sig">
+                                <div class="sig-line"></div>
+                                <p class="sig-name">Dr. S. Somanath</p>
+                                <p class="sig-role">Chairman, ISRO &</p>
+                                <p class="sig-role">Secretary, Department of Space</p>
+                            </div>
+                            <div class="cert-seal-box">
+                                <img src="assets/isro-seal.png" alt="ISRO Official Seal" class="cert-seal">
+                                <span class="seal-text">Official Seal</span>
+                            </div>
+                            <div class="cert-sig">
+                                <div class="sig-line"></div>
+                                <p class="sig-name">Dr. M. Sankaran</p>
+                                <p class="sig-role">Director,</p>
+                                <p class="sig-role">U R Rao Satellite Centre</p>
+                            </div>
+                        </div>
+                        <div class="cert-verify">
+                            <div class="verify-badge">
+                                <span class="verify-check">✓</span>
+                                Digitally Verified Document
+                            </div>
+                            <p class="cert-note">Issued by ISRO Headquarters, Bengaluru under the Public Outreach &
+                                Education Programme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEAM ========== -->
+    <section class="section team-section" id="team">
+        <div class="container">
+            <div class="section-label">My Initiative</div>
+            <h2 class="section-title">Team & <span class="gradient-text">Community</span></h2>
+
+            <div class="team-content">
+                <div class="team-info">
+                    <h3>Building a Team of Innovators</h3>
+                    <p>
+                        I've founded and am leading a team focused on learning, building, and shipping real products. We
+                        participate in hackathons, develop SaaS applications, and push each other to grow as developers
+                        and thinkers.
+                    </p>
+                    <ul class="team-highlights">
+                        <li>
+                            <span class="li-icon">🏆</span>
+                            <div>
+                                <strong>Hackathon Participation</strong>
+                                <span>Competing in national and international hackathons together</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="li-icon">🛠️</span>
+                            <div>
+                                <strong>SaaS Development</strong>
+                                <span>Building real software products as a team</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="li-icon">📚</span>
+                            <div>
+                                <strong>Collaborative Learning</strong>
+                                <span>AI, web dev, space tech — we learn and teach each other</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="li-icon">🌍</span>
+                            <div>
+                                <strong>Open to New Members</strong>
+                                <span>If you're passionate and willing to learn, reach out!</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-cta-card">
+                    <h3>Want to Join?</h3>
+                    <p>I'm always looking for motivated individuals who are passionate about AI, development, and space
+                        science. Whether you're a beginner or experienced, there's a place for you.</p>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-label">Connect</div>
+            <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+            <p class="section-desc">Interested in collaborating, joining the team, or just want to chat about AI and
+                space? Feel free to reach out.</p>
+
+            <div class="contact-cards">
+                <a href="mailto:vivek@example.com" class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">dev.vivekverma04@gmail.com</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Connect with me</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="contact-icon">🐙</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">View my code</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 Vivek Verma. All Rights Reserved.</p>
+            <p class="footer-sub">AI Developer · Space Science Enthusiast · Team Leader</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

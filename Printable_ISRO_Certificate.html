@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Appreciation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        :root {
+            --gold: #c9a84c;
+            --gold-light: #e8d48b;
+            --gold-dark: #8a6d1b;
+            --cert-bg: #fdfbf5;
+            --cert-text: #1a1a2e;
+            --cert-muted: #4a4a6a;
+            --accent-warm: #F47216;
+        }
+
+        .certificate-wrapper {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .certificate {
+            position: relative;
+            background: linear-gradient(145deg, #fdfbf5, #f9f4e8, #fdfbf5);
+            border: 3px solid var(--gold);
+            border-radius: 4px;
+            padding: 55px 60px;
+            box-shadow:
+                0 0 0 1px var(--gold-dark),
+                0 0 0 4px #fdf8ef,
+                0 0 0 5px var(--gold),
+                0 20px 60px rgba(0, 0, 0, 0.1);
+            color: var(--cert-text);
+        }
+
+        /* Corners */
+        .corner {
+            position: absolute;
+            width: 50px; height: 50px;
+            border-color: var(--gold);
+            border-style: solid;
+            border-width: 0;
+        }
+        .corner-tl { top: 14px; left: 14px; border-top-width: 2px; border-left-width: 2px; }
+        .corner-tr { top: 14px; right: 14px; border-top-width: 2px; border-right-width: 2px; }
+        .corner-bl { bottom: 14px; left: 14px; border-bottom-width: 2px; border-left-width: 2px; }
+        .corner-br { bottom: 14px; right: 14px; border-bottom-width: 2px; border-right-width: 2px; }
+
+        /* Cert Header */
+        .cert-header { text-align: center; margin-bottom: 28px; }
+
+        .cert-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 14px;
+        }
+
+        .cert-line {
+            width: 90px; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .cert-logo {
+            width: 72px; height: 72px;
+            object-fit: contain;
+        }
+
+        .cert-org {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #0a1628;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cert-dept {
+            font-size: 12px;
+            color: var(--cert-muted);
+            letter-spacing: 1px;
+            margin-top: 3px;
+        }
+
+        .cert-addr {
+            font-size: 10px;
+            color: #999;
+            margin-top: 3px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Cert Title */
+        .cert-title-block {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+        }
+
+        .cert-stars {
+            color: var(--gold);
+            font-size: 13px;
+            letter-spacing: 8px;
+            margin-bottom: 8px;
+        }
+
+        .cert-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .cert-title-line {
+            width: 100px; height: 2px;
+            background: linear-gradient(90deg, var(--accent-warm), var(--gold), var(--accent-warm));
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .cert-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .cert-meta span {
+            font-size: 11px;
+            color: var(--cert-muted);
+            letter-spacing: 0.3px;
+        }
+
+        /* Cert Body */
+        .cert-intro {
+            text-align: center;
+            font-size: 14px;
+            color: var(--cert-muted);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .cert-name-box {
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 26px;
+            position: relative;
+        }
+
+        .cert-name-box::before, .cert-name-box::after {
+            content: '';
+            position: absolute;
+            left: 50%; transform: translateX(-50%);
+            width: 260px; height: 1.5px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .cert-name-box::before { top: 0; }
+        .cert-name-box::after { bottom: 0; }
+
+        .cert-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #0a1628;
+        }
+
+        .cert-text { text-align: justify; }
+
+        .cert-text p {
+            font-size: 13.5px;
+            color: #2d2d4a;
+            margin-bottom: 14px;
+            line-height: 1.85;
+        }
+
+        .cert-text strong { color: #0a1628; font-weight: 600; }
+
+        .cert-quote {
+            text-align: center;
+            margin: 28px 0;
+        }
+
+        .cert-quote blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            font-style: italic;
+            color: var(--gold-dark);
+            padding: 18px 36px;
+            border-left: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+            background: rgba(201, 168, 76, 0.04);
+            display: inline-block;
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        /* Cert Footer */
+        .cert-footer {
+            margin-top: 36px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(201, 168, 76, 0.25);
+            page-break-inside: avoid;
+        }
+
+        .cert-signatures {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .cert-sig { text-align: center; flex: 1; }
+
+        .sig-line {
+            width: 130px; height: 1px;
+            background: #333;
+            margin: 0 auto 8px;
+        }
+
+        .sig-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0a1628;
+        }
+
+        .sig-role {
+            font-size: 10px;
+            color: var(--cert-muted);
+            line-height: 1.4;
+        }
+
+        .cert-seal-box {
+            flex: 0 0 110px;
+            text-align: center;
+        }
+
+        .cert-seal {
+            width: 90px; height: 90px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .seal-text {
+            display: block;
+            font-size: 8px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .cert-verify { text-align: center; }
+
+        .verify-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: #e8f5e9;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .verify-check {
+            width: 16px; height: 16px;
+            background: #2e7d32;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .cert-note {
+            font-size: 9px;
+            color: #aaa;
+        }
+        
+        @page {
+            size: A4 landscape;
+            margin: 0 !important;
+        }
+        @media print {
+            * {
+                page-break-after: avoid !important;
+                page-break-before: avoid !important;
+                page-break-inside: avoid !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            html, body {
+                width: 100vw !important;
+                height: 100vh !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                background: white !important;
+            }
+            .certificate-wrapper {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .certificate { 
+                box-shadow: none !important; 
+                padding: 30px 40px !important; 
+                margin: 0 !important; 
+                border: 3px solid var(--gold-dark) !important; 
+                transform: scale(0.65) !important;
+                transform-origin: center center !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-wrapper">
+        <div class="certificate">
+            <!-- Corner ornaments -->
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+
+            <!-- Header -->
+            <div class="cert-header">
+                <div class="cert-logo-row">
+                    <div class="cert-line"></div>
+                    <img src="assets/download.png" alt="ISRO Logo" class="cert-logo">
+                    <div class="cert-line"></div>
+                </div>
+                <h2 class="cert-org">Indian Space Research Organisation</h2>
+                <p class="cert-dept">Department of Space, Government of India</p>
+                <p class="cert-addr">Antariksh Bhavan, New BEL Road, Bengaluru − 560 094, Karnataka</p>
+            </div>
+
+            <!-- Title -->
+            <div class="cert-title-block">
+                <div class="cert-stars">★ ★ ★</div>
+                <h1 class="cert-title">Certificate of Appreciation</h1>
+                <div class="cert-title-line"></div>
+            </div>
+
+            <div class="cert-meta">
+                <span>Ref. No: ISRO/HQ/OUTREACH/2026/AP-3847</span>
+                <span>Date: 24 March 2026</span>
+            </div>
+
+            <!-- Body -->
+            <div class="cert-body">
+                <p class="cert-intro">This is to certify that</p>
+                <div class="cert-name-box">
+                    <p class="cert-name">Vivek Verma</p>
+                </div>
+
+                <div class="cert-text">
+                    <p>
+                        The Indian Space Research Organisation (ISRO) is pleased to recognise and appreciate
+                        your <strong>exceptional contributions and outstanding knowledge</strong> in the domains
+                        of <strong>Artificial Intelligence, Computer Programming, and Space Science &
+                            Technology</strong>.
+                    </p>
+                    <p>
+                        Your proficiency in developing AI-powered applications, your deep understanding of
+                        machine learning algorithms and natural language processing, and your ability to apply
+                        these technologies to solve real-world problems demonstrate a remarkable level of skill
+                        and dedication. Your programming expertise across multiple languages and frameworks has
+                        enabled you to build innovative solutions that bridge the gap between technology and
+                        scientific exploration.
+                    </p>
+                    <p>
+                        Furthermore, your comprehensive knowledge of space science — including astrophysics,
+                        satellite technology, orbital mechanics, and planetary exploration — reflects a genuine
+                        passion for understanding the cosmos. Your work at the intersection of AI and space
+                        science embodies the interdisciplinary approach that is essential for the future of
+                        space exploration.
+                    </p>
+                    <p>
+                        Your leadership in building and mentoring a team of aspiring developers and researchers
+                        is particularly commendable. You have demonstrated not only individual excellence but
+                        also the ability to inspire and uplift those around you.
+                    </p>
+                    <p>
+                        On behalf of the entire ISRO family, we congratulate you on your achievements and
+                        encourage you to continue your pursuit of knowledge and innovation. Individuals such as
+                        yourself represent the future of India's technological and scientific advancement.
+                    </p>
+                </div>
+
+                <div class="cert-quote">
+                    <blockquote>"The application of artificial intelligence to space exploration will define the
+                        next era of discovery. Those who master both shall lead the way."</blockquote>
+                </div>
+            </div>
+
+            <!-- Signatures -->
+            <div class="cert-footer">
+                <div class="cert-signatures">
+                    <div class="cert-sig">
+                        <div class="sig-line"></div>
+                        <p class="sig-name">Dr. S. Somanath</p>
+                        <p class="sig-role">Chairman, ISRO &</p>
+                        <p class="sig-role">Secretary, Department of Space</p>
+                    </div>
+                    <div class="cert-seal-box">
+                        <img src="assets/isro-seal.png" alt="ISRO Official Seal" class="cert-seal">
+                        <span class="seal-text">Official Seal</span>
+                    </div>
+                    <div class="cert-sig">
+                        <div class="sig-line"></div>
+                        <p class="sig-name">Dr. M. Sankaran</p>
+                        <p class="sig-role">Director,</p>
+                        <p class="sig-role">U R Rao Satellite Centre</p>
+                    </div>
+                </div>
+                <div class="cert-verify">
+                    <div class="verify-badge">
+                        <span class="verify-check">✓</span>
+                        Digitally Verified Document
+                    </div>
+                    <p class="cert-note">Issued by ISRO Headquarters, Bengaluru under the Public Outreach &
+                        Education Programme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
